@@ -1,41 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor Manage landing Page</title>
+
+    <!-- style -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- scripts -->
     <script src="script.js" defer></script>
+    <script src="carousel.js" defer></script>
   </head>
+
+  <!-- body section -->
   <body>
+    <!-- header section starts -->
     <header>
       <div class="container">
-        <div>
-          <div class="logo">
-            <img src="images/logo.svg" alt="manage logo" />
-          </div>
+        <div class="logo">
+          <a href="#"
+            ><img
+              src="images/logo.svg"
+              alt="manage logo"
+              class="mobile-nav-toggle"
+          /></a>
         </div>
-        <div>
-          <nav>
-            <ul role="list">
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Product</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Community</a></li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="primary-navigation">
+          <div class="cover"></div>
+          <img
+            src="./images/icon-close.svg"
+            alt="close-icon"
+            class="close-icon"
+          />
+          <ul aria-label="navigation" role="list" class="nav-list">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </nav>
         <div class="nav-btn">
           <button class="btn">Get Started</button>
         </div>
         <img src="images/icon-hamburger.svg" alt="Menu button" class="menu" />
       </div>
     </header>
+    <!-- header section ends -->
+
+    <!-- main section starts -->
     <main>
+      <!-- Hero section starts -->
       <section>
-        <div class="container">
-          <div class="flex-basis-40">
+        <div class="container hero">
+          <div class="flex-basis-40 hero-content">
             <h1>Bring everyone together to build better products.</h1>
             <div class="narrow-width">
               <p>
@@ -54,9 +73,12 @@
           </div>
         </div>
       </section>
+      <!-- Hero section ends -->
+
+      <!-- About section starts -->
       <section>
         <div class="container">
-          <div class="flex-basis-40">
+          <div class="flex-basis-40 about">
             <h2>What's different about Manage?</h2>
             <div class="narrow-width">
               <p>
@@ -68,9 +90,11 @@
           </div>
           <div class="flex-basis-40">
             <div class="side-list">
-              <h5 class="numbers">01</h5>
-              <div>
-                <h4>Track company-wide progress</h4>
+              <div class="title-wrap">
+                <h5 class="numbers">01</h5>
+                <h4 class="title">Track company-wide progress</h4>
+              </div>
+              <div class="content">
                 <p>
                   See how your day-to-day tasks fit into the water vision. Go
                   from tracking progess at the milestone level all the way down
@@ -80,9 +104,11 @@
               </div>
             </div>
             <div class="side-list">
-              <h5 class="numbers">02</h5>
-              <div>
+              <div class="title-wrap">
+                <h5 class="numbers">02</h5>
                 <h4>Advanced built-in reports</h4>
+              </div>
+              <div class="content">
                 <p>
                   Set internal delivery estimates and track progress toward
                   company goals. Our customisable dashboard helps you build out
@@ -91,9 +117,11 @@
               </div>
             </div>
             <div class="side-list">
-              <h5 class="numbers">03</h5>
-              <div>
+              <div class="title-wrap">
+                <h5 class="numbers">03</h5>
                 <h4>Everything you need in one place</h4>
+              </div>
+              <div class="content">
                 <p>
                   Stop jumping from one service to another to communicate, store
                   files, track tasks and share documents. Manage offers an
@@ -104,11 +132,14 @@
           </div>
         </div>
       </section>
+      <!-- About section ends -->
+
+      <!-- Carousel section starts -->
       <section class="carousel">
         <div class="container">
           <h2>What they've said</h2>
-          <div class="carousel-slider">
-            <div class="flex-basis-40">
+          <div class="carousel-slider" id="carousel-slider">
+            <div class="card active">
               <img src="images/avatar-anisha.png" alt="" />
               <div class="slider-content">
                 <h4>Anisha Li</h4>
@@ -119,7 +150,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex-basis-40">
+            <div class="card">
               <img src="images/avatar-ali.png" alt="" />
               <div class="slider-content">
                 <h4>Ali Bravo</h4>
@@ -130,7 +161,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex-basis-40">
+            <div class="card">
               <img src="images/avatar-richard.png" alt="" />
               <div class="slider-content">
                 <h4>Richard Watts</h4>
@@ -141,7 +172,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex-basis-40">
+            <div class="card">
               <img src="images/avatar-shanai.png" alt="" />
               <div class="slider-content">
                 <h4>Shanai Gough</h4>
@@ -152,11 +183,18 @@
                 </p>
               </div>
             </div>
+            <div class="dots">
+              <div class="dot active"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
 
           <button class="btn">Get Started</button>
         </div>
       </section>
+      <!-- Carousel section ends -->
       <section class="cta">
         <div class="cta-wrapper">
           <div class="flex-basis-40">

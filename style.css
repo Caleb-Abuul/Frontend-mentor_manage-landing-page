@@ -248,19 +248,24 @@ footer {
   padding: 20px 0;
   color: var(--very-pale-red);
 }
-footer .container .social {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+footer .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "footer-logo footer-nav subscribe"
+    "social footer-nav copyright";
+  column-gap: 3rem;
+  row-gap: auto;
 }
-footer .container .social .social-links {
-  width: 100%;
+footer .social-links {
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
-  margin-top: 80px;
+  grid-area: social;
+  align-self: self-end;
 }
-footer .container .social .social-links a {
+footer .container .social-links a {
   text-decoration: none;
   outline: none;
 }
@@ -269,22 +274,20 @@ footer .container .social .social-links a {
 }
 .secondary-nav-links {
   position: relative;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   justify-content: space-between;
-  flex-basis: 35%;
+  grid-area: footer-nav;
 }
 .secondary-nav-links ul {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   padding: 0 10px;
+  gap: 30px;
 }
 .secondary-nav-links ul li {
   display: inline-block;
-  margin-bottom: 20px;
 }
 
 .secondary-nav-links ul li a {
@@ -293,6 +296,9 @@ footer .container .social .social-links a {
 }
 .secondary-nav-links ul li a:hover {
   color: var(--primary-bright-red);
+}
+.subscribe {
+  grid-area: subscribe;
 }
 .subscribe form input {
   background-color: var(--very-pale-red);
@@ -321,8 +327,12 @@ footer .container .social .social-links a {
 .footer-btn:hover {
   background-color: var(--hover);
 }
-.subscribe .copyright {
-  margin-top: 80px;
+.footer-logo-wrap {
+  grid-area: footer-logo;
+}
+.copyright {
+  grid-area: copyright;
+  align-self: self-end;
 }
 .menu {
   display: none;
@@ -330,6 +340,9 @@ footer .container .social .social-links a {
 
 /* for mobile screen */
 @media (max-width: 48em) {
+  html {
+    overflow-x: hidden;
+  }
   body {
     width: 100%;
     text-align: center;
@@ -464,5 +477,62 @@ footer .container .social .social-links a {
   .cta-wrapper .cta-btn-div {
     display: flex;
     justify-content: center;
+  }
+  footer {
+    width: 100vw;
+  }
+
+  footer .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 4fr 2fr 2fr 1fr;
+    grid-template-areas:
+      "subscribe"
+      "nav"
+      "social"
+      "footer-logo"
+      "copyright";
+    width: 85%;
+    margin: 0 auto;
+    /* align-items: center;
+    justify-content: space-between; */
+  }
+  .subscribe {
+    grid-area: subscribe;
+  }
+  .subscribe form {
+    width: 100%;
+    display: flex;
+    & input {
+      flex-basis: 90%;
+    }
+  }
+  .social-links {
+    grid-area: social;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    /* gap: 1rem; */
+    justify-content: space-between;
+  }
+  .social-links a img {
+    width: 35px;
+    height: 35px;
+  }
+  .secondary-nav-links {
+    max-width: 75%;
+    grid-area: nav;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: max-content;
+    text-align: left;
+    margin: 10px auto 5px;
+  }
+  .copyright {
+    grid-area: copyright;
+  }
+  .footer-logo-wrap {
+    grid-area: footer-logo;
   }
 }

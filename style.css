@@ -40,14 +40,6 @@
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
 }
-@media (min-width: 50em) {
-  :root {
-    --fs-body: var(--fs-500);
-    --fs-primary-heading: var(--fs-900);
-    --fs-secondary-heading: var(--fs-800);
-    --fs-nav: var(--fs-300);
-  }
-}
 
 /* utility classes */
 .container {
@@ -336,6 +328,21 @@ footer .container .social-links a {
 }
 .menu {
   display: none;
+}
+.element {
+  position: absolute;
+  top: -300px;
+  right: -20px;
+  background-color: var(--very-pale-red);
+  width: 330px;
+  height: 800px;
+  border-radius: 100vmax;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.element.left {
+  top: 130%;
+  left: -300px;
 }
 
 /* for mobile screen */

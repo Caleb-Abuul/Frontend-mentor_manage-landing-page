@@ -14,8 +14,7 @@ This is a solution to the [Manage landing page challenge on Frontend Mentor](htt
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Acknowledgements](#acknowledgments)
 
 ## Overview
 
@@ -53,7 +52,7 @@ Users should be able to:
 
 I learned how to create carousels, and re-enforced my grid layout skills.
 
-To see how you can add code snippets, see below:
+Here is a snippet of that:
 
 ```html
 <div class="parent">
@@ -106,3 +105,7 @@ Going forward, I will use CSS grid containers to develop complex layouts
 - Frontend Mentor - [@Caleb-Abuul](https://www.frontendmentor.io/profile/Caleb-Abuul)
 - X - [@CalebAbuul](https://x.com/CalebAbuul)
 - LinkedIn - [@CalebAbuul](https://www.linkedin.com/in/caleb-abuul/)
+
+## Acknowledgments
+
+A big thank you to [Kevin Powell](https://github.com/kevin-powell). He has been a great inspiration through his [YouTube Channel](https://youtube.com/@KevinPowell?si=Yhw2-yrCyeetnmys). His solution for the [Frontend Mentor Manage-landin-page project](https://youtu.be/h3bTwCqX4ns?si=P3J2UdvHI3udbL7u) helped me got a hang of how to approach challenges on frontend mentor. He has tons of videos spanning several topics in CSS on YouTube. Please do well to check out his YouTube channel - [Kevin Powell](https://youtube.com/@KevinPowell?si=Yhw2-yrCyeetnmys)
